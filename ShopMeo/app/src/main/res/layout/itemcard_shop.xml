@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:id="@+id/carditemshop"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/imagecard"
+                android:layout_width="48dp"
+                android:layout_height="78dp"
+                android:src="@drawable/iphone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/headcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/head"
+                    android:textSize="@dimen/sizehead" />
+
+                <TextView
+                    android:id="@+id/costcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30.000.000 VND"
+                    android:textColor="#FF0000"
+                    android:textSize="@dimen/sizehsubhead" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/countcard"
+                android:background="@color/white"
+                android:padding="20dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="15dp"
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </EditText>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

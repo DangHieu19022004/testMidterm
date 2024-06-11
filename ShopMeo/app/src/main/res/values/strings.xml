@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ShopMeo</string>
+    <string name="hoten">Ho va ten</string>
+    <string name="phoneNum">So dien thoai</string>
+    <string name="passW">Nhap mat khau</string>
+    <string name="rePassW">Nhap lai mat khau</string>
+    <string name="createUser">Tao tai khoan</string>
+    <string name="login">Dang nhap</string>
+    <string name="head">Iphone 15 promax</string>
+    <string name="subhead">Sale 20%</string>
+</resources>

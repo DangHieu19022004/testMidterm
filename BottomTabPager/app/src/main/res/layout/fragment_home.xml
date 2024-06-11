@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EDC3C3"
+    tools:context=".fragmentMenu.HomeFragment">
+
+
+    <com.google.android.material.tabs.TabLayout
+        app:tabMode="scrollable"
+        android:id="@+id/optiontablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <tlu.cse.ht63.bottomtabpager.widget.CustomViewPager
+        android:layout_below="@+id/optiontablayout"
+        android:id="@+id/optionviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

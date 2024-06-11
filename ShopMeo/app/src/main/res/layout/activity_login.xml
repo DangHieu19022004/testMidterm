@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:background="@color/bluewhite"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/phoneNum"
+                android:layout_margin="@dimen/pd15sp"
+                android:padding="@dimen/pd15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/phoneNum"
+                android:minWidth="350dp">
+            </EditText>
+            <EditText
+                android:id="@+id/passW"
+                android:password="true"
+                android:layout_margin="@dimen/pd15sp"
+                android:padding="@dimen/pd15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/passW"
+                android:minWidth="350dp">
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnsignIn"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/pd15sp"
+                    android:text="@string/createUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnlogIn"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/pd15sp"
+                    android:text="@string/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
