@@ -27,6 +27,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -43,6 +44,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
+import me.relex.circleindicator.CircleIndicator;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnget, btnpush, btndelete, btnupdate;
@@ -51,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rclv;
     UserAdapter userAdapter;
     List<User> userList;
+
+    //viewpager
+    private ViewPager viewPager;
+    private CircleIndicator circleIndicator;
+    private PhotoAdapter photoAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +70,18 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        //slide
+        viewPager = findViewById(R.id.viewpager);
+        circleIndicator = findViewById(R.id.circleindicator);
+
+        photoAdapter = new PhotoAdapter(this, getListPhoto());
+        viewPager.setAdapter(photoAdapter);
+
+        circleIndicator.setViewPager(viewPager);
+
+        photoAdapter.registerDataSetObserver(circleIndicator.getDataSetObserver());
+        //
 
 
 
@@ -129,6 +149,17 @@ public class MainActivity extends AppCompatActivity {
 //                onClickGetData();
             }
         });
+    }
+
+    private List<Photo> getListPhoto() {
+        List<Photo> list = new ArrayList<>();
+
+        list.add(new Photo(R.drawable.img1));
+        list.add(new Photo(R.drawable.img1));
+        list.add(new Photo(R.drawable.img1));
+        list.add(new Photo(R.drawable.img1));
+
+        return list;
     }
 
     private void openDialogUpdateItem(@NonNull User user){

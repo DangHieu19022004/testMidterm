@@ -19,6 +19,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -80,7 +81,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewManHinhChinh = findViewById(R.id.recycleview);
         AdapterItemShop adapterItemShop = new AdapterItemShop(itemShopArrayList, MainActivity.this);
         recyclerViewManHinhChinh.setAdapter(adapterItemShop);
-        recyclerViewManHinhChinh.setLayoutManager(new GridLayoutManager(this, 2));
+
+        //show horizontal recycleview
+        LinearLayoutManager horizontalLayoutManager
+                = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewManHinhChinh.setLayoutManager(horizontalLayoutManager);
+        //
     }
 
     private void ActionViewFlipper() {
